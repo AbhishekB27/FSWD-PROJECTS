@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/StonePaperScissor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script defer src="/js/StonePaperScissor.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-rps">
+            <div class="titel-score">
+                <div class="title">
+                    <span>ROCK</span>
+                    <span>PAPER</span>
+                    <span>SCISSORS</span>
+                </div>
+                <div class="start-button"> <button class="start-game">START</button> </div>
+                <div class="score">
+                    <span class="score-c1">SCORE</span>
+                    <span class="score-c2">10</span>
+                </div>
+            </div>
+            <div class="game-cover">
+                <div class="game">
+                    <div class="stone ss"> <i class="fa-solid fa-hand-back-fist hFistI"></i> </div>
+                    <div class="paper ss"> <i class="fa-solid fa-hand hPaperI"></i> </div>
+                    <div class="scissors ss"> <i class="fa-solid fa-hand-scissors hScissorI"></i> </div>
+                </div>
+            </div>
+            <div class="win-lose">
+                <div class="picked">
+                    <div class="u-picked">YOU PICKED</div>
+                    <div class="userClick ss large">  </div>
+                    <!-- <i class="fa-solid fa-hand-back-fist"></i> -->
+                </div>
+                <div class="result-status">
+                    <div class="win-title">BOT WIN</div>
+                    <div class="ply-again"><button>PLAY AGAIN</button></div>
+                </div>
+                <div class="picked">
+                    <div class="c-picked">BOT PICKED</div>
+                    <div class="botClick ss large">  </div>
+                    <!-- <i class="fa-solid fa-hand"></i> -->
+                </div>
+            </div>
+        </div>
+        <div class="game-footer">
+            <span class="timer">00:00</span>
+            <span class="rules">RULES</span>
+        </div>
+        <div class="about-rules">
+            <div class="close-button">
+                <button class=""><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <p class="rules-para">
+                This is classic two person game. Players start each round by clicking, "Rock, Paper, Sicssors, Clicked!"
+                , each player holds out their fist for rock and flat-hand for paper, or their index and middle finger for scissors.
+                Rock crushes Scissor, Scissor cut Paper, Paper covers Rock. See who wins each round!  
+            </p>
+        </div>
+    </div>
+</body>
+</html>
