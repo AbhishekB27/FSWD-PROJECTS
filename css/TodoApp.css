@@ -32,6 +32,17 @@
     border-bottom: 1px solid gainsboro;
     transition: all 300ms;
 }
+.reset{
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    color: #9b9cb3;
+    cursor: pointer;
+}
+.reset:active{
+    color: #666afb;
+    transform: scale(0.9);
+}
 .date{
     display: flex;
     flex-direction: column;
