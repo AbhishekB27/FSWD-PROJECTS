@@ -91,9 +91,6 @@ const result = (winner,looser)=>{
     alert("Winner: " + winner.name )
     game_container.style = 'display:none;';
     uiResult.style = 'display:flex';
-    // let winnerCloneNode= winner.icon.cloneNode(true);
-    // let looserCloneNode = looser.icon.cloneNode(true);
-    
     if(winner.name === 'Bot' && (winner.move === 'stone' || winner.move === 'paper' ||winner.move === 'scissors')){
         getPreviouState(`${looser.move}`,`${winner.move}`);
         winTitle.innerHTML=`${winner.name} Win`;
@@ -134,7 +131,7 @@ const bot = ()=>{
 // lets create a game functionality
 const wholeGame = (timer)=>{
     //STONE
-stone.addEventListener('click',()=>{
+    stone.addEventListener('click',()=>{
     clearInterval(timer)
     uPicked='stone';
     botPicked=bot();
@@ -157,6 +154,7 @@ stone.addEventListener('click',()=>{
 })
 //PAPER
 paper.addEventListener('click',()=>{
+    clearInterval(timer)
     uPicked='paper';
     botPicked=bot();
     if(uPicked === botPicked){
@@ -178,6 +176,7 @@ paper.addEventListener('click',()=>{
 })
 //SCISSOR
 scissors.addEventListener('click',()=>{
+    clearInterval(timer)
     uPicked='scissor';
     botPicked=bot();
     if(uPicked === botPicked){
