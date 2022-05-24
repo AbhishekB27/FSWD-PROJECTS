@@ -1,6 +1,22 @@
 console.log("TODO-APP");
+
+//user define getElement function 
+function getRefOfElement(ele){
+    let element = document.querySelector(`${ele}`);
+    element.classList.add('hello');
+    return element;
+   }
+   //user define createElement functiion 
+   function createElement(ele ,attriName,attriValue){
+       let element = document.createElement(`${ele}`);
+       element.setAttribute(`${attriName}`,`${attriValue}`);
+       return element
+   }
+
 const addButton = document.querySelector('.add-button');
 const todoInput = document.querySelector('.todo-input');
+const inputBox = getRefOfElement('.input-box');
+const resetButton = document.querySelector('.reset');
 const day = new Date().getDay();
 const date = new Date().getDate();
 const year = new Date().getMonth();
@@ -8,21 +24,9 @@ const nameOfDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","
 const nameOfYear = ["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
 var todoArr = [];
 
-//user define getElement function 
-function getRefOfElement(ele){
- let element = document.querySelector(`${ele}`);
- element.classList.add('hello');
- return element;
-}
-//user define createElement functiion 
-function createElement(ele ,attriName,attriValue){
-    let element = document.createElement(`${ele}`);
-    element.setAttribute(`${attriName}`,`${attriValue}`);
-    return element
-}
+
 //Add Item in todo app
 addButton.addEventListener('click',()=>{
-    let inputBox = getRefOfElement('.input-box');
     let timeBox = getRefOfElement('.time-input');
     let listP = createElement('li','class','todo-item');
     let listC = createElement('div','class','wrapper');
@@ -61,6 +65,10 @@ addButton.addEventListener('click',()=>{
     });
 
 
+});
+//reset todo-input
+resetButton.addEventListener('click',()=>{
+    inputBox.value="";
 });
 
 //set date objects to todo app
