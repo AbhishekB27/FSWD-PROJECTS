@@ -45,6 +45,7 @@ h1:hover{
     outline: none;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
 
 }
 .btn:active{
@@ -204,4 +205,66 @@ h1:hover{
 }
 .btn-5:hover::before,.btn-5:hover::after{
     width: 65%;
+}
+.btn-6{
+    position: relative;
+    z-index: 1;
+    transition: all 300ms;   
+}
+.btn-6::before{
+    content: "";
+    width: 100%;
+    height: 0%;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    background-color: #4361ee;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn-6:hover:before{
+    height: 100%;
+}
+.btn-7{
+    position: relative;
+    z-index: 1;
+    transition: all 300ms;   
+}
+.btn-7::before{
+    content: "";
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    background-color: #d90429;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn-7:hover:before{
+    height: 100%;
+}
+.btn-8{
+    position: relative;
+    z-index: 1;
+    transition: all 300ms; 
+    overflow: hidden;
+}
+.btn-8::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    right: 0;
+    /* left: 0; */
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ccff33;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn-8:hover::after{
+    transform: scale(8.1);
 }
