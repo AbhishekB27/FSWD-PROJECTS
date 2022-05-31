@@ -8,9 +8,9 @@ function createElement(ele ,attriName,attriValue){
 var inputBar = document.querySelector('.inputBar');
 var cardsContainer= document.querySelector('.recipe-cards');
 let searchButton = document.querySelector('.searchButton');
-    cardsContainer.innerHTML="";
-    inputBar.addEventListener('keyup',(event)=>{
+inputBar.addEventListener('keyup',(event)=>{
     event.keyCode === 13 ? fetchData() : ''
+    cardsContainer.innerHTML="";
 })
 searchButton.addEventListener('click',()=>{
     cardsContainer.innerHTML="";
