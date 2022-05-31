@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+.container{
+    background-image: url('/Images/Recipe.jpg');
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.main-recipe{
+    /* background-color: crimson; */
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 10px 20px; */
+}
+.recipe-header{
+    display: flex;
+    /* background-color: aquamarine; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.recipe-header span{
+    /* background-color: aliceblue; */
+    color: white;
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+}
+.search-bar{
+    display: flex;
+    width: 80%;
+    background-color:white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.search-bar input{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+    outline: none;
+    border: none;
+}
+.search-bar button{
+    padding: 5px 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-color: rgba(128 , 128, 128,0.2);
+    cursor: pointer;
+}
+.recipe-cards{
+    /* background-color: rgb(138, 43, 226,0.5); */
+    /* border: 2px solid fuchsia; */
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    /* grid-template-rows: repeat(1,1fr); */
+    height: 414px;
+    row-gap: 28px;
+    column-gap: 10px;
+    padding: 10px 10px;
+    overflow: scroll;
+}
+.recipe-cards::-webkit-scrollbar{
+    width: 15px;
+    display: none;
+    /* background-color: rgba(255, 255, 255, 0.5) */
+}
+.recipe-cards::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.3);
+}
+.recipe-cards::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+.card-1{
+    width: 270px;
+    height: 395px;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 330ms;
+    border-radius: 6px;
+    position: relative;
+    transition: all 330ms;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.ingredients{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgb(138, 43, 226,0.5); */
+    color: white;
+    right: 0;
+    left: 0;
+    height: 0px;
+    /* width: 0px; */
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding:10px 20px 20px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    overflow: scroll;
+    transition: all 440ms;
+    opacity: 0;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+.ingredients::-webkit-scrollbar{
+    width: 10px;
+    display: none;
+}
+.ingredients::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.9)
+}
+.ingredients::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.5);
+    /* border-radius: 5px; */
+}
+.card-1:hover .ingredients{
+    height: 312px;
+    opacity: 1;
+}
+.img-cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 330px;
+}
+.card-1 img{
+    width: 270px;
+    height: 330px;
+    display: none;
+}
+.recipe-info{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    /* padding: 4px; */
+}
+.recipe-info .name{
+    font-size: 25px;
+    font-weight: 600;
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+}
+.recipe-info .calories{
+    font-size: 18px;
+    font-weight: 600;
+}
+.preLoader{
+    height: 50px;
+    width: 50px;
+    background-color:transparent;
+    border-radius: 50%;
+    border-top:  5px solid rgb(138, 43, 226,0.5);
+    border-right:  5px solid rgba(0, 0, 0, 0.5);
+    border-left:   5px solid rgba(0, 0, 0, 0.5);
+    border-bottom:  5px solid rgba(0, 0, 0, 0.5);
+    animation: preLoader 700ms linear infinite;
+}
+@keyframes preLoader {
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+@media only screen and (max-width:1020px) {
+    .recipe-cards{
+        /* background-color: rgb(138, 43, 226,0.5); */
+        /* border: 2px solid fuchsia; */
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        /* grid-template-rows: repeat(1,1fr); */
+        height: 414px;
+        row-gap: 28px;
+        column-gap: 10px;
+        padding: 10px 10px;
+        overflow: scroll;
+    }
+    .card-1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .recipe-cards{
+        /* background-color: rgb(138, 43, 226,0.5); */
+        /* border: 2px solid fuchsia; */
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        /* grid-template-rows: repeat(1,1fr); */
+        height: 414px;
+        row-gap: 28px;
+        column-gap: 10px;
+        padding: 10px 10px;
+        overflow: scroll;
+    }
+    .card-1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (max-width:568px) {
+    .recipe-cards{
+        /* background-color: rgb(138, 43, 226,0.5); */
+        border: 2px solid fuchsia;
+        display: grid;
+        grid-template-columns:repeat(1,1fr);
+        /* grid-template-rows: repeat(1,1fr); */
+        height: 414px;
+        row-gap: 28px;
+        column-gap: 10px;
+        padding: 10px 10px;
+        overflow: scroll;
+    }
+    .card-1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
