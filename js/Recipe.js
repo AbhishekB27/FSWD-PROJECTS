@@ -8,6 +8,7 @@ function createElement(ele ,attriName,attriValue){
 var inputBar = document.querySelector('.inputBar');
 var cardsContainer= document.querySelector('.recipe-cards');
 let searchButton = document.querySelector('.searchButton');
+let prePreLoader = document.querySelector('.pre-pre-loader');
 inputBar.addEventListener('keyup',(event)=>{
     event.keyCode === 13 ? fetchData() : ''
     cardsContainer.innerHTML="";
@@ -15,7 +16,7 @@ inputBar.addEventListener('keyup',(event)=>{
 searchButton.addEventListener('click',()=>{
     cardsContainer.innerHTML="";
     console.log("Serach Button Clicked")
-    fetchData()
+             fetchData()
 });
 
 var count = 0;
@@ -23,11 +24,11 @@ const fetchData = async()=>{
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${inputBar.value}&app_id=aa39bec7&app_key=79486f57499e5a0f9566bd4bd0945f84`;
     alert(inputBar.value)
        let response = await fetch(url);
-       let data =await response.json()
+       let data =await response.json();
        console.log(data.hits)
        data.hits.map((result)=>{
            let count=1;
-           let card = createElement('div','class','card-1');
+           let  card = createElement('div','class','card-1');
            let imgCover = createElement('div','class','img-cover')
            let preLoader = createElement('div','class','preLoader')
            imgCover.appendChild(preLoader)
