@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    /* height:calc(100vh - 20px); */
+    height: 100vh;
+    width: 100%;
+    background-color: #2b2d42;
+    position: relative;
+    /* padding: 10px 0 10px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.design{
+    position: absolute;
+    cursor: pointer;
+}
+.design:nth-child(1){
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    right: 50%;
+    top: 10%;
+    transform: rotate(45deg);
+}
+.design:nth-child(2){
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    right: 30%;
+    top: 70%;
+}
+.design:nth-child(3){
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    right: 70%;
+    top: 30%;
+    transform: rotate(10deg);
+}
+.design:nth-child(4){
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    right: 90%;
+    top: 75%;
+    transform: rotate(25deg);
+}
+.design:nth-child(5){
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    right: 20%;
+    top: 35%;
+    transform: rotate(145deg);
+}
+.design:nth-child(6){
+    height: 145px;
+    width: 145px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    right: 55%;
+    top: 65%;
+    transform: rotate(30deg);
+}.design:nth-child(7){
+    height: 25px;
+    width: 25px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    left: 5%;
+    top: 5%;
+    transform: rotate(95deg);
+}.design:nth-child(8){
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    right: 30%;
+    top: 40%;
+    transform: rotate(5deg);
+}
+.design:hover{
+    
+    /* transform: rotate(0deg); */
+    /* transition: all 330ms ease-in-out; */
+    /* background-color: antiquewhite; */
+}
+.quote{
+    position: relative;
+    width: 300px;
+    padding: 4px;
+    height: 400px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5px; */
+    /* text-align: center; */
+}
+.quote-data{
+    width: 200px;
+    height: 200px;
+    padding: 2px 4px;
+    /* background-color: blueviolet; */
+    text-align: center;
+    letter-spacing: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.quote-gen{
+    width: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 2px;
+    position: absolute;
+    top: 0;
+    border-bottom: 2px solid white;
+}
+.btn-gen{
+    /* width: 70%; */
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+}
+.btn-copy{
+    /* width: 30%; */
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transition: all 400ms;
+
+}
+.tooltip2{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 5px;
+    bottom: 120%;
+    left: -75%;
+    display: none;
+}
+.tooltip2::after{
+    content: "";
+    border-top: 6px solid rgba(255, 255, 255, 0.6);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 40%;
+    
+}
+.btn-copy:hover .tooltip2{
+    display: block;
+}
+.btn-copy:active i {
+    transform: scale(0.9);
+}
+.tooltip1{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 5px;
+    bottom: 108%;
+    left: -7%;
+    display: none;
+}
+.tooltip1::after{
+    content: "";
+    border-top: 6px solid rgba(255, 255, 255, 0.6);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 40%;
+}
+.btn-gen:hover .tooltip1{
+    display: block;
+}
+.btn-gen:active i {
+    transform: scale(0.9);
+}
+.quote-title{
+    color: white;
+    /* border: 1px solid red; */
+}
+.left,.right{
+    width: 100%;
+}
+.fa-quote-left{
+    float:left ;
+}
+.fa-quote-right{
+    float:right ;
+}
+@keyframes anim1 {
+    0%{
+        
+    }
+}
+.hexagon{
+    /* 40px */
+    width: 110px;
+    /* 22px */
+    height: 63px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    /* background-color: #cad2c5; */
+
+    top: 5%;
+}
+.hexagon::after,.hexagon::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: #cad2c5; */
+    transition: all 330ms ease-in-out;
+}
+.hexagon::after{
+    transform: rotate(60deg);
+}
+.hexagon::before{
+    transform: rotate(-60deg);
+}
+.hexagon:hover::after{
+    transform: rotate(0deg);
+}
+.hexagon:hover::before{
+    transform: rotate(0deg);
+}
+.hexagon2{
+    /* 40px */
+    width: 110px;
+    /* 22px */
+    height: 63px;
+    /* background-color: #cad2c5; */
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 70%;
+    left: 70%;
+}
+.hexagon2::after,.hexagon2::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: #cad2c5; */
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: all 330ms ease-in-out;
+
+}
+.hexagon2::after{
+    transform: rotate(60deg);
+}
+.hexagon2::before{
+    transform: rotate(-60deg);
+}
