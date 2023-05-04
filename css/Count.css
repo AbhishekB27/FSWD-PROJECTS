@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Sources Sans Pro',sans-serif;
 }
+
 .container{
     width: 100%;
     height: 100vh;
@@ -14,10 +15,30 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    position: relative;
+}
+.setting{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+.fa-gear{
+    color: white;
+    height: 35px;
+    width: 35px;
+    transition: all;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+}
+.fa-gear:hover{
+    cursor: pointer;
+    transform: rotate(20deg);
 }
 .count-head{
     font-size: 45px;
     color: white;
+    text-align: center;
 }
 .wave{
     position: absolute;
@@ -27,6 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 5px;
     padding: 10px;
     margin-left: auto;
@@ -44,8 +66,11 @@
 }
 
 .timer-style{
- 
-    padding: 25px 35px;
+     width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     color: white;
     border-radius: 5px;
@@ -97,4 +122,37 @@
     100%{
         transform: rotate(360deg);
     }
+}
+.dateContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dateInputContainer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.dateInput{
+    padding: 8px;
+    color: black;
+    font-size: larger;
+    text-align: center;
+}
+.enterButton{
+    width: 100%;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: larger;
+}
+.dateHeading{
+    font-size: larger;
 }
