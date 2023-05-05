@@ -139,7 +139,7 @@ const wholeGame = (timer)=>{
         alert("Match Tie");
         draw({name:'User',icon:stoClone,move:'stone',status:'Tie'},{name:'Bot',icon:stoClone,move:'stone',status:'Tie'});
     }
-    switch(botPicked){
+    else switch(botPicked){
         case 'paper':{
             console.log("Bot win: "+"Paper beat stone");
             result({name:'Bot',icon:papClone,move:'paper'},{name:'User',icon:stoClone,move:'stone'});
@@ -161,7 +161,7 @@ paper.addEventListener('click',()=>{
         alert("Match Tie");
         draw({name:'User',icon:papClone,move:'paper',status:'Tie'},{name:'Bot',icon:papClone,move:'paper',status:'Tie'});
     }
-    switch(botPicked){
+    else switch(botPicked){
         case 'stone':{
             console.log("User win2: "+"Paper beat stone");
             result({name:'User',icon:papClone,move:'paper'},{name:'Bot',icon:stoClone,move:'stone'});
@@ -175,7 +175,8 @@ paper.addEventListener('click',()=>{
     }
 })
 //SCISSOR
-scissors.addEventListener('click',()=>{
+scissors.addEventListener('click',(event)=>{
+    console.log(event.target)
     clearInterval(timer)
     uPicked='scissor';
     botPicked=bot();
@@ -183,7 +184,7 @@ scissors.addEventListener('click',()=>{
         alert("Match Tie");
         draw({name:'User',icon:sciClone,move:'scissors',status:'Tie'},{name:'Bot',icon:sciClone,move:'scissors',status:'Tie'});
     }
-    switch(botPicked){
+    else switch(botPicked){
         case 'stone':{
             console.log("Bot win3: "+"Stone beat scissor");
             result({name:'Bot',icon:stoClone,move:'stone'},{name:'User',icon:sciClone,move:'scissors'});
